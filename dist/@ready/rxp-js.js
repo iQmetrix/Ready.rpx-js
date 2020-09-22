@@ -1,10 +1,12 @@
-/*! @ready/rxp-js - v1.3.3 - 2020-06-10
+/*! @ready/rxp-js - v1.3.3 - 2020-09-22
  * The official Realex Payments JS Library
  * https://github.com/iQmetrix/Ready.rxp-js
  * Licensed MIT
  */
 Element.prototype.remove = function() {
+  if (this.parentElement) {
     this.parentElement.removeChild(this);
+  }
 };
 
 NodeList.prototype.remove = HTMLCollection.prototype.remove = function() {
